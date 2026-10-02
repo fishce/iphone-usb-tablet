@@ -11,7 +11,7 @@ class Program
     [DllImport("user32.dll", SetLastError = true)] static extern uint SendInput(uint n, INPUT[] inst, int cb);
 
     [StructLayout(LayoutKind.Sequential)]
-    struct INPUT { public int type; public MOUSEINPUT mi; public int pad0, pad1; }
+    struct INPUT { public int type; public MOUSEINPUT mi; }
     [StructLayout(LayoutKind.Sequential)]
     struct MOUSEINPUT { public int dx, dy; public uint data, flags, time; public IntPtr extra; }
 
