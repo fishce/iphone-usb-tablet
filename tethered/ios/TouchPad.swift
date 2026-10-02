@@ -17,7 +17,7 @@ class TouchView: UIView {
         isUserInteractionEnabled = true
         isMultipleTouchEnabled = true
         backgroundColor = UIColor(white: 0.08, alpha: 1)
-        isIdleTimerDisabled = true
+        UIApplication.shared.isIdleTimerDisabled = true
 
         link = CADisplayLink(target: self, selector: #selector(tick))
         link.preferredFrameRateRange = CAFrameRateRange(minimum: 120, maximum: 120, preferred: 120)
